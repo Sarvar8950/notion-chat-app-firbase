@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./images/logo.png">
+    <title>NotionIt Chat App</title>
+    <link href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./index.css" />
+    <link rel="stylesheet" href="./chat.css" />
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="mdc-top-app-bar">
+        <div class="mdc-top-app-bar__row">
+            <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
+                <img src="./images/logo.png" alt="logo" class="logo">
+                <span class="mdc-top-app-bar__title">NotionIT Chat App</span>
+            </section>
+        </div>
+    </header>
+
+    <div class="messages">
+        <div class="mdc-card mdc-card--outlined">
+            <!-- Chats -->
+            <div id="chat"></div>
+
+            <!-- Send Message  -->
+            <label class="mdc-text-field mdc-text-field--filled mdc-text-field--no-label">
+                <span class="mdc-text-field__ripple"></span>
+                <input class="mdc-text-field__input" id="message" type="text" placeholder="First Name" value=""
+                    aria-label="Label" required>
+                <span class="mdc-line-ripple"></span>
+            </label>
+            <button class="mdc-button mdc-button--outlined" id="login" onclick="sendMessage()">
+                <span class="mdc-button__ripple"></span>
+                <span class="mdc-button__label">Send</span>
+            </button>
+        </div>
+    </div>
+
+    <!-- Material Script  -->
+    <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
+
+    <!-- Firbase connection & CDNs -->
+    <script src="https://www.gstatic.com/firebasejs/9.10.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.10.0/firebase-database-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.10.0/firebase-firestore-compat.js"></script>
+    <script src="./chat.js"></script>
+</body>
+
+</html>
